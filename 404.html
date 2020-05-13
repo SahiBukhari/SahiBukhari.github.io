@@ -8,6 +8,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script language=javascript>
+  function redirect(){
+  //window.location = "https://play.google.com/store/apps/details?id=com.SahihBukhari.app";
+  if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+  }
+</script>
   <style>
 img {
   display: block;
@@ -16,13 +25,13 @@ img {
 }
 </style>
 </head>
-<body>
+<body onload="redirect()">
 <!---ic_launcher-playstore.png-->
 <div class="container-fluid">
   <div class="container-fluid">
    <div class="row">
 	<div class="col-md-12 col-md-offset-5">
-	      <h1><center>Sahih Bukhari</center></h1>
+	  <h1><center>Sahih Bukhari</center></h1>
 		  <p><center>Looks like you don't have our app installed , Please download our app from Google Play Store</center></p>
 		  </div>
     </div>
