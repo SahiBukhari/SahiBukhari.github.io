@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Test Redirection</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script language=javascript>
+  function redirect(){
+  window.location = "intent://open_app/#Intent;scheme=https;package=com.whipp_driver.hi5;S.email=immujahidkhan6@gmail.com;S.token=tokenimmujahidkhan6@gmail.com;end";
+   var x = "" + navigator.platform;
+  document.getElementById("demo").innerHTML = x;
+  if(x=="Win32"){
+      document.getElementById("link").href="https://play.google.com/store/apps/details?id=com.whipp_driver.hi5";
+  }else if(x=="MacIntel" || x=="MacPPC" || x=="Mac68K"){
+        document.getElementById("link").href="https://apps.apple.com/us/app/travelist/id1498411647";
+  }
+  
+  }
+</script>
+  <style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+</head>
+<body onload="redirect()">
+<!---ic_launcher-playstore.png-->
+<div class="container-fluid">
+  <div class="container-fluid">
+       <p id="demo"></p>
+   <div class="row">
+	<div class="col-md-12 col-md-offset-5">
+	  <h1><center>Test Redirection</center></h1>
+		  <center>Looks like you don't have our app installed , Please download our app from Google Play Store</center>
+		  </div>
+    </div>
+    <div class="row">
+	<div class="col-md-12 col-md-offset-5">
+	      <a id="link" href="intent://open_app/#Intent;scheme=https;package=com.whipp_driver.hi5;S.email=immujahidkhan6@gmail.com;S.token=tokenimmujahidkhan6@gmail.com;end" title="About Me"><img class="img-fluid" src="https://raw.githubusercontent.com/SahiBukhari/SahiBukhari.github.io/master/assets/img/playstore.png" alt="Google Play Store" style="width:50%;" /></a>
+		  </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
